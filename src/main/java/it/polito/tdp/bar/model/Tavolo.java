@@ -44,7 +44,7 @@ public class Tavolo implements Comparable<Tavolo>{
 
 	@Override
 	public String toString() {
-		return "Tavolo [capienza=" + capienza + ", libero=" + libero + "]";
+		return "Tavolo [" + capienza + " posti, libero: " + libero + "]";
 	}
 	
 	

@@ -41,8 +41,7 @@ public class GruppoClienti {
 
 	@Override
 	public String toString() {
-		return "GruppoClienti [numPersone=" + numPersone + ", durata=" + durata + ", tolleranza=" + tolleranza
-				+ ", tavolo=" + tavolo + "]";
+		return "GruppoClienti [" + numPersone + " persone, " + durata + " minuti, tolleranza: " + tolleranza + ", " + tavolo + "]";
 	}
 	
 	

@@ -58,21 +58,21 @@ public class Simulator {
 		//PREPARAZIONE DEL WORLD STATUS
 		this.eventi.clear();
 		this.stats.clear();
-//		
-//		this.tavoli.add(new Tavolo(4, true));
-//		this.tavoli.add(new Tavolo(4, true));
-//		this.tavoli.add(new Tavolo(4, true));
-//		this.tavoli.add(new Tavolo(4, true));
-//		this.tavoli.add(new Tavolo(4, true));
-//		this.tavoli.add(new Tavolo(6, true));
-//		this.tavoli.add(new Tavolo(6, true));
-//		this.tavoli.add(new Tavolo(6, true));
-//		this.tavoli.add(new Tavolo(6, true));
-//		this.tavoli.add(new Tavolo(8, true));
-//		this.tavoli.add(new Tavolo(8, true));
-//		this.tavoli.add(new Tavolo(8, true));
-//		this.tavoli.add(new Tavolo(8, true));
-//		this.tavoli.add(new Tavolo(10, true));
+		
+		this.tavoli.add(new Tavolo(4, true));
+		this.tavoli.add(new Tavolo(4, true));
+		this.tavoli.add(new Tavolo(4, true));
+		this.tavoli.add(new Tavolo(4, true));
+		this.tavoli.add(new Tavolo(4, true));
+		this.tavoli.add(new Tavolo(6, true));
+		this.tavoli.add(new Tavolo(6, true));
+		this.tavoli.add(new Tavolo(6, true));
+		this.tavoli.add(new Tavolo(6, true));
+		this.tavoli.add(new Tavolo(8, true));
+		this.tavoli.add(new Tavolo(8, true));
+		this.tavoli.add(new Tavolo(8, true));
+		this.tavoli.add(new Tavolo(8, true));
+		this.tavoli.add(new Tavolo(10, true));
 		this.tavoli.add(new Tavolo(10, true));
 		
 		//CARICAMENTO DELLA CODA
@@ -151,7 +151,8 @@ public class Simulator {
 					this.stats.addClientiTot();
 					this.stats.addClientiSoddisfatti();
 					
-					//AGGIONAMENTO VALORI WOLRD STATUS DENTRO getBestTavolo()
+					//AGGIONAMENTO VALORI WOLRD STATUS DENTRO getBestTavolo() +
+					e.getClienti().setTavolo(t);
 				}
 			}
 			else {				//se sono disponibili
@@ -172,7 +173,8 @@ public class Simulator {
 					this.stats.addClientiTot();
 					this.stats.addClientiSoddisfatti();
 					
-					//AGGIONAMENTO VALORI WOLRD STATUS DENTRO getBestTavolo()
+					//AGGIONAMENTO VALORI WOLRD STATUS DENTRO getBestTavolo() +
+					e.getClienti().setTavolo(t);
 				}
 				
 			}
@@ -181,8 +183,8 @@ public class Simulator {
 			//NON CI SONO AGGIORNAMENTI DI MISURAZIONI
 			//NON C'E' GENERAZIONE DI NUOVI EVENTI
 			//AGGIONAMENTO VALORI WOLRD STATUS
-			e.getClienti().getTavolo().setLibero(true);
-			
+			Tavolo t2 = e.getClienti().getTavolo();
+			t2.setLibero(true);
 		break;
 
 		}
